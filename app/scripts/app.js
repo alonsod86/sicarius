@@ -9,14 +9,17 @@
  * Main module of the application.
  */
 angular
-  .module('sicariusApp', [
+  .module('sicarius', [
+    'ui.bootstrap',
     'ngAnimate',
     'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ui.bootstrap'
+    'ngMaterial',
+    'sicarius.controllers',
+    'sicarius.directives'
   ])
   .config(function ($routeProvider) {
     $routeProvider

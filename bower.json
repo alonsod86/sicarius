@@ -10,11 +10,14 @@
     "angular-route": "^1.3.0",
     "angular-sanitize": "^1.3.0",
     "angular-touch": "^1.3.0",
+    "angular-aria": "^1.3.x",
+    "angular-material": "^0.8.0",
     "angular-ui-bootstrap-bower": "0.11.0"
   },
   "devDependencies": {
-    "angular-mocks": "^1.3.0"
+    "angular-mocks": "^1.3.0",
+    "angular-material": "~0.8.2"
   },
   "appPath": "app",
-  "moduleName": "sicariusApp"
+  "moduleName": "sicarius"
 }

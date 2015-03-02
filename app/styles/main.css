@@ -59,6 +59,38 @@ body {
   margin-top: 28px;
 }
 
+/* Sicarius */
+#dashboard-container {
+  width: 100%;
+  padding: 5px;
+}
+#dashboard-container #palette ul {
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+#dashboard-container #narnia {
+  padding: 10px;
+}
+
+#dashboard-container md-toolbar {
+  min-height: inherit;
+}
+
+#dashboard-container .md-tile-content {
+  padding: 2px;
+}
+
+#dashboard-container .md-toolbar-tools {
+  min-height: inherit;
+  height: inherit;
+}
+
+#dashboard-container .md-tile-content md-checkbox {
+  margin: 0px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
