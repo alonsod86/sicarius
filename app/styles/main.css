@@ -91,6 +91,13 @@ body {
   margin: 0px;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
+#layers md-switch {
+  margin: 5px 0;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {
