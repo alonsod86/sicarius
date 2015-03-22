@@ -91,6 +91,14 @@ body {
   margin: 0px;
 }
 
+.dropdown-menu {
+  cursor: pointer;
+}
+
+md-tabs .md-header {
+  border-bottom: 1px solid #D8D8D8;
+}
+
 .navbar {
   margin-bottom: 0;
 }

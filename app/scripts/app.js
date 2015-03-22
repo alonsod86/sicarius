@@ -19,7 +19,8 @@ angular
     'ngTouch',
     'ngMaterial',
     'sicarius.controllers',
-    'sicarius.directives'
+    'sicarius.directives',
+    'sicarius.services'
   ])
   .config(function ($routeProvider) {
     $routeProvider

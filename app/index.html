@@ -23,7 +23,7 @@
 
 <!-- Top menu bar -->
 <header>
-  <nav class="navbar navbar-default">
+  <nav id="top-bar" class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -43,7 +43,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{menu.label}} <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li ng-repeat="item in menu.options" ng-class="item.divider">
-                <a ng-hide="item.divider!=undefined" ng-click="item.event()"><span class="glyphicon glyphicon-{{item.icon}}"></span> {{item.label}}</a>
+                <a ng-hide="item.divider!=undefined" ng-click="mnuClickHandler(item.event)"><span class="glyphicon glyphicon-{{item.icon}}"></span> {{item.label}}</a>
               </li>
             </ul>
           </li>
@@ -54,22 +54,22 @@
 </header>
 
 <!-- Dashboard container -->
-<section>
-  <div ng-controller="TabsController" class="sample" layout="column">
-    <md-tabs md-selected="selectedIndex" flex>
-      <md-tab ng-repeat="tab in tabs"
-              ng-disabled="tab.disabled"
-              label="{{tab.title}}">
-        <dashboard ng-if="selectedIndex===0"></dashboard>
-        <graph ng-if="selectedIndex===1"></graph>
-      </md-tab>
-    </md-tabs>
-  </div>
+<section layout="column">
+    <div ng-controller="TabsController">
+      <md-tabs md-selected="selectedIndex" flex>
+        <md-tab ng-repeat="tab in tabs"
+                ng-disabled="tab.disabled"
+                label="{{tab.title}}">
+          <dashboard></dashboard>
+        </md-tab>
+      </md-tabs>
+    </div>
 </section>
+
 
 <!-- Footer -->
 <footer ng-controller="MainCtrl">
-  <nav class="navbar navbar-default navbar-fixed-bottom">
+  <nav id="bottom-bar" class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="#">{{version}}</a>
@@ -90,9 +90,6 @@
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-
-    </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 </footer>
@@ -120,6 +117,9 @@
 
 <!-- custom directives -->
 <script src="scripts/directives.js"></script>
+
+<!-- custom services -->
+<script src="scripts/services.js"></script>
 
 <!-- endbuild -->
 </body>
